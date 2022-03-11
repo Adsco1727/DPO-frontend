@@ -11,18 +11,18 @@ export default function MIssueCard({info}) {
     // Navigation on Button Click
     const router = useRouter();
     const navigateToDetailedIssue = async (pass) => {
-        if (pass.type === 'view') {
-            if (role) {
+        if (role) {
+            if (pass.type === 'view') {
                 await router.push(`/issue/${pass.url}`);
             } else {
-
+                await router.push(`/issue/${pass.url}`);
             }
         } else {
-            await router.push(`/issue/${pass.url}`);
+
         }
     }
     //Role statement changes
-    const [role, setRole] = useState();
+    const [role, setRole] = useState(null);
     // User Context useContext
     const userCtx = useContext(UserContext);
     //Watch changes on useCtx
