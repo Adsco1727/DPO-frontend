@@ -21,8 +21,8 @@ export default function MFooter() {
                     </Link>
                     <Link key={'emailLink'} href={'mailto:' + contactInfo.email}>
                         <a key={'emailHyper'} className={'d-flex font-18 align-items-center pt-10'}>
-                            <MailFilled key={'emailIcon'} className={'c-green font-28 mr-10'}/>
-                            {contactInfo.email}
+                            <MailFilled key={'emailIcon'} className={'c-green font-28 mr-10'} />
+                            { contactInfo.email }
                         </a>
                     </Link>
                 </Col>
