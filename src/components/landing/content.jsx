@@ -1,15 +1,16 @@
+import { useEffect, useState } from "react";
+
 import MLandingOptions from "./options";
 import MLandingWhyChoose from "./whychoose";
 import MLandingCallUs from "./callus";
+import MLandscape from "./landscape";
+import MWhitePaper from "./whitepaper";
+import MKDrawer from "../../core/ui-kit/drawer/drawer";
 
 import { LandingCards } from "../../core/data/landing/landingcards";
 import { WhyChooseUs } from "../../core/data/landing/chooseus";
 import { Divider} from "antd";
 import { AcknowledgeData } from '../../core/data/config/acknowledge';
-
-import MLandscape from "./landscape";
-import MKDrawer from "../../core/ui-kit/drawer/drawer";
-import { useEffect, useState } from "react";
 
 
 export default function MLandingContent() {
@@ -32,6 +33,7 @@ export default function MLandingContent() {
             <MLandingWhyChoose key={'whyChooseUs'} detail={WhyChooseUs}/>
             <Divider key={'secondDivider'}/>
             <MLandingCallUs key={'callUs'}/>
+            <MWhitePaper key={'whitePaper'}/>
             <MKDrawer key={'drawer'} visible={drawerVisible} action={onAcknowledgeClick} {...AcknowledgeData}/>
         </div>
     )

@@ -1,6 +1,10 @@
+import MPrimaryBtn from "../../core/ui-kit/buttons/primaryBtn";
+
 export default function MWhitePaper() {
 
     return (
-      <h1>WhitePaper</h1>
+      <div className={'container pv-50 d-flex justify-content-center'}>
+        <MPrimaryBtn label={'WhitePaper'} key={'whitePaperRequest'} size={'large'} type={'primary'}/>
+      </div>
     )
 }
