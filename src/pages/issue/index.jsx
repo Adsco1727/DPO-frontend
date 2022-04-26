@@ -2,13 +2,9 @@ import MIssueOverView from "../../components/issues/allissues";
 import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
 
 export default function MIssuesAll() {
-    return(
-        <MIssueOverView />
-    )
+  return <MIssueOverView />;
 }
 
 MIssuesAll.getLayout = function getLayout(page) {
-    return (
-        <MLayoutWithHeaderAndFooter>{ page }</MLayoutWithHeaderAndFooter>
-    )
-}
+  return <MLayoutWithHeaderAndFooter>{page}</MLayoutWithHeaderAndFooter>;
+};

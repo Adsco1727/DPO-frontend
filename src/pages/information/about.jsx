@@ -3,16 +3,14 @@ import MSAbout from "../../components/staticInfo/about";
 import MLandingCallUs from "../../components/landing/callus";
 
 export default function MPAbout() {
-    return(
-        <>
-            <MSAbout />
-            <MLandingCallUs />
-        </>
-    )
+  return (
+    <>
+      <MSAbout />
+      <MLandingCallUs />
+    </>
+  );
 }
 
 MPAbout.getLayout = function getLayout(page) {
-    return (
-        <MLayoutLanding>{page}</MLayoutLanding>
-    )
-}
+  return <MLayoutLanding>{page}</MLayoutLanding>;
+};

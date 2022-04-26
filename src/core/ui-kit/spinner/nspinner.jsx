@@ -1,7 +1,5 @@
-import { Spin } from 'antd';
+import { Spin } from "antd";
 
-export default function MKNSpinner({size}) {
-    return(
-        <Spin size={size}/>
-    )
+export default function MKNSpinner({ size }) {
+  return <Spin size={size} />;
 }

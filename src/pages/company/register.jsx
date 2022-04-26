@@ -2,15 +2,9 @@ import MCRegisterCompany from "../../components/company/register";
 import MLayoutWithHeaderAndFooter from "../../layout/layout-headerAndFooter";
 
 export default function MPRegisterCompany() {
-    return(
-        <MCRegisterCompany />
-    )
+  return <MCRegisterCompany />;
 }
 
 MPRegisterCompany.getLayout = function getLayout(page) {
-    return(
-        <MLayoutWithHeaderAndFooter>
-            {page}
-        </MLayoutWithHeaderAndFooter>
-    )
-}
+  return <MLayoutWithHeaderAndFooter>{page}</MLayoutWithHeaderAndFooter>;
+};

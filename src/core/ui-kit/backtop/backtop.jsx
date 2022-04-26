@@ -1,7 +1,5 @@
-import {BackTop} from "antd";
+import { BackTop } from "antd";
 
 export default function MKBackTop() {
-    return(
-        <BackTop />
-    )
+  return <BackTop />;
 }

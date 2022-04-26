@@ -1,5 +1,3 @@
 export default function MKSkeletonTableData() {
-    return(
-        <h1>Action Card Skeleton</h1>
-    )
+  return <h1>Action Card Skeleton</h1>;
 }
