@@ -1,6 +1,66 @@
-export default function MKMailingModal() {
-    return (
-        // TODO: Need to add inputs and buttons for whitepaper
-        <h1>Mailing Modal with inputs</h1>
-    )
+import { useState } from "react";
+import { Modal, Form, Input, Button } from "antd";
+import { useForm } from "antd/lib/form/Form";
+import { MailOutlined } from "@ant-design/icons";
+
+export default function MKMailingModal(props) {
+  const [confirmLoading, setConfirmLoading] = useState(false);
+
+  const handleOk = () => {
+    setConfirmLoading(false);
+    props.action();
+  };
+
+  const [form] = useForm();
+
+  const onFinish = (values) => {
+    console.log(values);
+  };
+
+  const validateMessages = {
+    required: "${label} is required!",
+    types: {
+      email: "${label} is not a valid email!",
+    },
+  };
+
+  return (
+    <Modal
+      title={<p className={"c-green font-20"}>WhitePaper of DPO</p>}
+      visible={props.visible}
+      onOk={() => form.submit()}
+      confirmLoading={confirmLoading}
+      onCancel={props.action}
+    >
+      <Form
+        preserve={false}
+        form={form}
+        key={"whitePaper-form"}
+        layout={"vertical"}
+        onFinish={onFinish}
+        validateMessages={validateMessages}
+        scrollToFirstError
+      >
+        <Form.Item
+          key={"userEmail"}
+          name={"email"}
+          label="Your email address"
+          rules={[
+            {
+              type: "email",
+              required: true,
+            },
+          ]}
+          hasFeedback
+        >
+          <Input
+            key={"userEmailInput"}
+            size={"large"}
+            placeholder={"example@example.com"}
+            prefix={<MailOutlined className="site-form-item-icon" />}
+          />
+        </Form.Item>
+      </Form>
+    </Modal>
+  );
 }
