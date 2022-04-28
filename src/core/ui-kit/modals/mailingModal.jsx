@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, Form, Input, Button } from "antd";
+import { Modal, Form, Input } from "antd";
 import { useForm } from "antd/lib/form/Form";
 import { MailOutlined } from "@ant-design/icons";
 
@@ -8,7 +8,8 @@ export default function MKMailingModal(props) {
 
   const handleOk = () => {
     setConfirmLoading(false);
-    props.action();
+    form.submit();
+    // props.action();
   };
 
   const [form] = useForm();
@@ -28,7 +29,7 @@ export default function MKMailingModal(props) {
     <Modal
       title={<p className={"c-green font-20"}>WhitePaper of DPO</p>}
       visible={props.visible}
-      onOk={() => form.submit()}
+      onOk={handleOk}
       confirmLoading={confirmLoading}
       onCancel={props.action}
     >

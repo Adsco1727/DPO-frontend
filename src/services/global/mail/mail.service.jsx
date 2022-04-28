@@ -1,3 +1,10 @@
-export const sendMail = ({ description }) => {
+import
+
+export const sendWhitePaperToUser = ({ description }) => {
 
 }
+
+export const sendTxHistoryToUser = ({ description }) => {
+
+}
+
