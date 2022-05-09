@@ -1,5 +1,3 @@
-import
-
 export const sendWhitePaperToUser = ({ description }) => {
 
 }
