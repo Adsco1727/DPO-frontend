@@ -1,8 +1,6 @@
 import { Button } from "antd";
 
 export default function MPrimaryBtn(props) {
-
-
   return (
     <Button
       type={props.type}

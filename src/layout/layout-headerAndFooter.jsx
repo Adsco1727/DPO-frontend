@@ -8,7 +8,7 @@ export default function MLayoutWithHeaderAndFooter({ children }) {
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <MNavbar key={"navbar"} />
-      <Content key={"contentArea"} className="bg-white">
+      <Content key={"contentArea"} className="bg-white pv-40">
         {children}
       </Content>
       <MFooter key={"footer"} />
