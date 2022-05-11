@@ -10,15 +10,12 @@ export default function MNewIssueFundRaise() {
     <>
       <Form.Item label="Fund-raise Types">
         <MCheckBoxGroup
-          key={"checkBoxGroup-fundTypes"}
+          key="checkBoxGroup-fundTypes"
           options={fundraiseTypes}
         />
       </Form.Item>
       <Form.Item label="Stable Coins">
-        <MCheckBoxGroup
-          key={"checkBoxGroup-stableCoins"}
-          options={stableCoins}
-        />
+        <MCheckBoxGroup key="checkBoxGroup-stableCoins" options={stableCoins} />
       </Form.Item>
     </>
   );
